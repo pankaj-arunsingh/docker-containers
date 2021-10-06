@@ -1,0 +1,24 @@
+D:\projects\part12-containers-applications>docker exec -it todo-backend_redis_1 script redis-cli
+Script started, file is redis-cli
+# redis-cli
+127.0.0.1:6379> KEYS *
+1) "added_todos"
+127.0.0.1:6379> GET added_todos
+"3"
+127.0.0.1:6379> SET added_todos 9001
+OK
+127.0.0.1:6379> GET added_todos
+"9001"
+127.0.0.1:6379> GET added_todos
+"4"
+127.0.0.1:6379> SET added_todos 9001
+OK
+127.0.0.1:6379> DEL added_todos
+(integer) 1
+127.0.0.1:6379> DEL added_todos
+(integer) 1
+127.0.0.1:6379> SET added_todos 9001
+OK
+127.0.0.1:6379> exit
+# exit
+Script done, file is redis-cli
